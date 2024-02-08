@@ -74,5 +74,14 @@ namespace AcademiaPanel2
 
             lblResultadoCalorias.Text = calorias.ToString("f2");
         }
+
+        private void numPesoHidratacao_ValueChanged(object sender, EventArgs e)
+        {
+            decimal peso = numPesoHidratacao.Value;
+
+            decimal hidratacao = (peso * 35) / 1000;
+
+            lblResultadoHidratacao.Text = hidratacao.ToString() + "L";
+        }
     }
 }

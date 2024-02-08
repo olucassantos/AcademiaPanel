@@ -46,9 +46,10 @@
             this.cmbAtividade = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.numPesoHidratacao = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.lblResultadoHidratacao = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAltura)).BeginInit();
@@ -57,7 +58,8 @@
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPesoCalorias)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPesoHidratacao)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -288,7 +290,7 @@
             // 
             this.groupBox3.BackColor = System.Drawing.Color.PaleTurquoise;
             this.groupBox3.Controls.Add(this.groupBox6);
-            this.groupBox3.Controls.Add(this.numericUpDown4);
+            this.groupBox3.Controls.Add(this.numPesoHidratacao);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(7, 247);
@@ -303,6 +305,7 @@
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.Turquoise;
+            this.groupBox6.Controls.Add(this.lblResultadoHidratacao);
             this.groupBox6.Location = new System.Drawing.Point(217, 15);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
@@ -312,15 +315,22 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Resultado";
             // 
-            // numericUpDown4
+            // numPesoHidratacao
             // 
-            this.numericUpDown4.Font = new System.Drawing.Font("OCR A Extended", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown4.Location = new System.Drawing.Point(4, 51);
-            this.numericUpDown4.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(195, 35);
-            this.numericUpDown4.TabIndex = 0;
-            this.numericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numPesoHidratacao.DecimalPlaces = 2;
+            this.numPesoHidratacao.Font = new System.Drawing.Font("OCR A Extended", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numPesoHidratacao.Location = new System.Drawing.Point(4, 51);
+            this.numPesoHidratacao.Margin = new System.Windows.Forms.Padding(2);
+            this.numPesoHidratacao.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numPesoHidratacao.Name = "numPesoHidratacao";
+            this.numPesoHidratacao.Size = new System.Drawing.Size(195, 35);
+            this.numPesoHidratacao.TabIndex = 0;
+            this.numPesoHidratacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numPesoHidratacao.ValueChanged += new System.EventHandler(this.numPesoHidratacao_ValueChanged);
             // 
             // label6
             // 
@@ -339,6 +349,18 @@
             this.monthCalendar1.Margin = new System.Windows.Forms.Padding(6);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
+            // 
+            // lblResultadoHidratacao
+            // 
+            this.lblResultadoHidratacao.AutoSize = true;
+            this.lblResultadoHidratacao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblResultadoHidratacao.Font = new System.Drawing.Font("OCR A Extended", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultadoHidratacao.Location = new System.Drawing.Point(2, 19);
+            this.lblResultadoHidratacao.Name = "lblResultadoHidratacao";
+            this.lblResultadoHidratacao.Padding = new System.Windows.Forms.Padding(10);
+            this.lblResultadoHidratacao.Size = new System.Drawing.Size(20, 61);
+            this.lblResultadoHidratacao.TabIndex = 2;
+            this.lblResultadoHidratacao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -367,7 +389,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numPesoCalorias)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPesoHidratacao)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -388,13 +412,14 @@
         private System.Windows.Forms.ComboBox cmbAtividade;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown numPesoHidratacao;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label lblResultadoImc;
         private System.Windows.Forms.Label lblResultadoCalorias;
+        private System.Windows.Forms.Label lblResultadoHidratacao;
     }
 }
 
