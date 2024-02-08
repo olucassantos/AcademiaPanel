@@ -49,7 +49,6 @@
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.numDuracao = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAltura)).BeginInit();
@@ -59,7 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numPesoCalorias)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numDuracao)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -164,7 +162,6 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.DarkKhaki;
-            this.groupBox2.Controls.Add(this.numDuracao);
             this.groupBox2.Controls.Add(this.groupBox5);
             this.groupBox2.Controls.Add(this.numPesoCalorias);
             this.groupBox2.Controls.Add(this.label4);
@@ -267,7 +264,7 @@
             this.dateDuracao.Size = new System.Drawing.Size(190, 35);
             this.dateDuracao.TabIndex = 1;
             this.dateDuracao.Value = new System.DateTime(2024, 2, 7, 0, 0, 0, 0);
-            this.dateDuracao.Visible = false;
+            this.dateDuracao.ValueChanged += new System.EventHandler(this.numPesoCalorias_ValueChanged);
             // 
             // cmbAtividade
             // 
@@ -343,17 +340,6 @@
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
             // 
-            // numDuracao
-            // 
-            this.numDuracao.Font = new System.Drawing.Font("OCR A Extended", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numDuracao.Location = new System.Drawing.Point(4, 120);
-            this.numDuracao.Margin = new System.Windows.Forms.Padding(2);
-            this.numDuracao.Name = "numDuracao";
-            this.numDuracao.Size = new System.Drawing.Size(190, 35);
-            this.numDuracao.TabIndex = 1;
-            this.numDuracao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numDuracao.ValueChanged += new System.EventHandler(this.numPesoCalorias_ValueChanged);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,7 +368,6 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numDuracao)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -410,7 +395,6 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label lblResultadoImc;
         private System.Windows.Forms.Label lblResultadoCalorias;
-        private System.Windows.Forms.NumericUpDown numDuracao;
     }
 }
 

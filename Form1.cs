@@ -47,10 +47,13 @@ namespace AcademiaPanel2
         private void CalculaCaloriasGastas()
         {
             decimal peso = numPesoCalorias.Value;
-            // DateTime horaFinal = dateDuracao.Value;
+            DateTime horaDuracao = dateDuracao.Value;
             int atividade = cmbAtividade.SelectedIndex;
 
-            decimal duracaoAtividade = numDuracao.Value;
+            int horas = horaDuracao.Hour;
+            int minutos = horaDuracao.Minute;
+
+            decimal duracaoAtividade = (horas * 60) + minutos;
 
             decimal met = 0;
 
