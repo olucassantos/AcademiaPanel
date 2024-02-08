@@ -37,5 +37,39 @@ namespace AcademiaPanel2
         {
             CalculaImc();
         }
+
+
+        private void numPesoCalorias_ValueChanged(object sender, EventArgs e)
+        {
+            CalculaCaloriasGastas();
+        }
+
+        private void CalculaCaloriasGastas()
+        {
+            decimal peso = numPesoCalorias.Value;
+            // DateTime horaFinal = dateDuracao.Value;
+            int atividade = cmbAtividade.SelectedIndex;
+
+            decimal duracaoAtividade = numDuracao.Value;
+
+            decimal met = 0;
+
+            if (atividade == 0)
+                met = 3;
+            else if (atividade == 1)
+                met = 8.3m;
+            else if (atividade == 2)
+                met = 6;
+            else if (atividade == 3)
+                met = 6;
+            else if (atividade == 4)
+                met = 5;
+            else if (atividade == 5)
+                met = 7;
+
+            decimal calorias = met * peso * (duracaoAtividade / 60);
+
+            lblResultadoCalorias.Text = calorias.ToString("f2");
+        }
     }
 }

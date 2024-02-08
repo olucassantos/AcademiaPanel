@@ -30,32 +30,36 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblResultadoImc = new System.Windows.Forms.Label();
             this.numAltura = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.numPeso = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.lblResultadoCalorias = new System.Windows.Forms.Label();
+            this.numPesoCalorias = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dateDuracao = new System.Windows.Forms.DateTimePicker();
+            this.cmbAtividade = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.lblResultadoImc = new System.Windows.Forms.Label();
+            this.numDuracao = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAltura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPeso)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPesoCalorias)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDuracao)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -91,6 +95,18 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Resultado";
             // 
+            // lblResultadoImc
+            // 
+            this.lblResultadoImc.AutoSize = true;
+            this.lblResultadoImc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblResultadoImc.Font = new System.Drawing.Font("OCR A Extended", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultadoImc.Location = new System.Drawing.Point(2, 19);
+            this.lblResultadoImc.Name = "lblResultadoImc";
+            this.lblResultadoImc.Padding = new System.Windows.Forms.Padding(10);
+            this.lblResultadoImc.Size = new System.Drawing.Size(20, 61);
+            this.lblResultadoImc.TabIndex = 0;
+            this.lblResultadoImc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // numAltura
             // 
             this.numAltura.DecimalPlaces = 2;
@@ -104,7 +120,7 @@
             0});
             this.numAltura.Name = "numAltura";
             this.numAltura.Size = new System.Drawing.Size(195, 35);
-            this.numAltura.TabIndex = 3;
+            this.numAltura.TabIndex = 1;
             this.numAltura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numAltura.ValueChanged += new System.EventHandler(this.numPeso_ValueChanged);
             // 
@@ -131,7 +147,7 @@
             0});
             this.numPeso.Name = "numPeso";
             this.numPeso.Size = new System.Drawing.Size(195, 35);
-            this.numPeso.TabIndex = 1;
+            this.numPeso.TabIndex = 0;
             this.numPeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numPeso.ValueChanged += new System.EventHandler(this.numPeso_ValueChanged);
             // 
@@ -148,13 +164,14 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.DarkKhaki;
+            this.groupBox2.Controls.Add(this.numDuracao);
             this.groupBox2.Controls.Add(this.groupBox5);
-            this.groupBox2.Controls.Add(this.numericUpDown3);
+            this.groupBox2.Controls.Add(this.numPesoCalorias);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.dateDuracao);
+            this.groupBox2.Controls.Add(this.cmbAtividade);
             this.groupBox2.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(430, 8);
@@ -169,6 +186,7 @@
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.Olive;
+            this.groupBox5.Controls.Add(this.lblResultadoCalorias);
             this.groupBox5.ForeColor = System.Drawing.Color.White;
             this.groupBox5.Location = new System.Drawing.Point(217, 36);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
@@ -179,15 +197,34 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Resultado";
             // 
-            // numericUpDown3
+            // lblResultadoCalorias
             // 
-            this.numericUpDown3.Font = new System.Drawing.Font("OCR A Extended", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown3.Location = new System.Drawing.Point(4, 186);
-            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(190, 35);
-            this.numericUpDown3.TabIndex = 6;
-            this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lblResultadoCalorias.AutoSize = true;
+            this.lblResultadoCalorias.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblResultadoCalorias.Font = new System.Drawing.Font("OCR A Extended", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultadoCalorias.Location = new System.Drawing.Point(2, 19);
+            this.lblResultadoCalorias.Name = "lblResultadoCalorias";
+            this.lblResultadoCalorias.Padding = new System.Windows.Forms.Padding(10);
+            this.lblResultadoCalorias.Size = new System.Drawing.Size(20, 61);
+            this.lblResultadoCalorias.TabIndex = 1;
+            this.lblResultadoCalorias.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // numPesoCalorias
+            // 
+            this.numPesoCalorias.DecimalPlaces = 2;
+            this.numPesoCalorias.Font = new System.Drawing.Font("OCR A Extended", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numPesoCalorias.Location = new System.Drawing.Point(4, 186);
+            this.numPesoCalorias.Margin = new System.Windows.Forms.Padding(2);
+            this.numPesoCalorias.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numPesoCalorias.Name = "numPesoCalorias";
+            this.numPesoCalorias.Size = new System.Drawing.Size(190, 35);
+            this.numPesoCalorias.TabIndex = 2;
+            this.numPesoCalorias.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numPesoCalorias.ValueChanged += new System.EventHandler(this.numPesoCalorias_ValueChanged);
             // 
             // label4
             // 
@@ -195,9 +232,9 @@
             this.label4.Location = new System.Drawing.Point(4, 95);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 17);
+            this.label4.Size = new System.Drawing.Size(138, 17);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Duração";
+            this.label4.Text = "Duração (min)";
             // 
             // label5
             // 
@@ -220,33 +257,35 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Atividade";
             // 
-            // dateTimePicker1
+            // dateDuracao
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("OCR A Extended", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(4, 118);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(190, 35);
-            this.dateTimePicker1.TabIndex = 1;
-            this.dateTimePicker1.Value = new System.DateTime(2024, 2, 7, 0, 0, 0, 0);
+            this.dateDuracao.Font = new System.Drawing.Font("OCR A Extended", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateDuracao.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateDuracao.Location = new System.Drawing.Point(4, 120);
+            this.dateDuracao.Margin = new System.Windows.Forms.Padding(2);
+            this.dateDuracao.Name = "dateDuracao";
+            this.dateDuracao.Size = new System.Drawing.Size(190, 35);
+            this.dateDuracao.TabIndex = 1;
+            this.dateDuracao.Value = new System.DateTime(2024, 2, 7, 0, 0, 0, 0);
+            this.dateDuracao.Visible = false;
             // 
-            // comboBox1
+            // cmbAtividade
             // 
-            this.comboBox1.Font = new System.Drawing.Font("OCR A Extended", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbAtividade.Font = new System.Drawing.Font("OCR A Extended", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAtividade.FormattingEnabled = true;
+            this.cmbAtividade.Items.AddRange(new object[] {
             "Caminhada",
             "Corrida",
             "Patinação",
             "Natação",
             "Abdominais",
             "Dança de Salão"});
-            this.comboBox1.Location = new System.Drawing.Point(4, 50);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(190, 31);
-            this.comboBox1.TabIndex = 0;
+            this.cmbAtividade.Location = new System.Drawing.Point(4, 50);
+            this.cmbAtividade.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbAtividade.Name = "cmbAtividade";
+            this.cmbAtividade.Size = new System.Drawing.Size(190, 31);
+            this.cmbAtividade.TabIndex = 0;
+            this.cmbAtividade.SelectedIndexChanged += new System.EventHandler(this.numPesoCalorias_ValueChanged);
             // 
             // groupBox3
             // 
@@ -283,7 +322,7 @@
             this.numericUpDown4.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(195, 35);
-            this.numericUpDown4.TabIndex = 6;
+            this.numericUpDown4.TabIndex = 0;
             this.numericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
@@ -302,19 +341,18 @@
             this.monthCalendar1.Location = new System.Drawing.Point(521, 266);
             this.monthCalendar1.Margin = new System.Windows.Forms.Padding(6);
             this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 3;
+            this.monthCalendar1.TabIndex = 0;
             // 
-            // lblResultadoImc
+            // numDuracao
             // 
-            this.lblResultadoImc.AutoSize = true;
-            this.lblResultadoImc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblResultadoImc.Font = new System.Drawing.Font("OCR A Extended", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultadoImc.Location = new System.Drawing.Point(2, 19);
-            this.lblResultadoImc.Name = "lblResultadoImc";
-            this.lblResultadoImc.Padding = new System.Windows.Forms.Padding(10);
-            this.lblResultadoImc.Size = new System.Drawing.Size(20, 61);
-            this.lblResultadoImc.TabIndex = 0;
-            this.lblResultadoImc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.numDuracao.Font = new System.Drawing.Font("OCR A Extended", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDuracao.Location = new System.Drawing.Point(4, 120);
+            this.numDuracao.Margin = new System.Windows.Forms.Padding(2);
+            this.numDuracao.Name = "numDuracao";
+            this.numDuracao.Size = new System.Drawing.Size(190, 35);
+            this.numDuracao.TabIndex = 1;
+            this.numDuracao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numDuracao.ValueChanged += new System.EventHandler(this.numPesoCalorias_ValueChanged);
             // 
             // Form1
             // 
@@ -338,10 +376,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.numPeso)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPesoCalorias)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDuracao)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -354,12 +395,12 @@
         private System.Windows.Forms.NumericUpDown numPeso;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numPesoCalorias;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker dateDuracao;
+        private System.Windows.Forms.ComboBox cmbAtividade;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.NumericUpDown numericUpDown4;
@@ -368,6 +409,8 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label lblResultadoImc;
+        private System.Windows.Forms.Label lblResultadoCalorias;
+        private System.Windows.Forms.NumericUpDown numDuracao;
     }
 }
 
